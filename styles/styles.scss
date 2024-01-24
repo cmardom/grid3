@@ -1,0 +1,105 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+body{
+  background-color: $gris;
+}
+
+header{
+  background-color: $oscuro;
+  nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min_menu_width, 1fr)); 
+    ul {
+      grid-column: 1 / 2;
+      list-style-type: none;
+      color: $claro;
+      li{
+        padding: $padding;
+      }
+    }
+  }
+ 
+}
+
+main{
+  display: grid;
+  grid-template-columns: minmax(100px, max-content) minmax(100px, max-content);
+  gap: $padding;
+  justify-items: center;
+
+  >div{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    background-color: $claro;
+    border: 1px solid $negro;
+
+  
+
+    button{
+      background-color: $primario;
+      color: $claro;
+      padding: $padding;
+    }
+  }
+  h2{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  .casa1{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+
+  }
+
+  .casa2{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  
+  }
+  .casa3{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+}
+
+footer{
+  background-color: $primario;
+  color: $claro;
+
+  .casasVentaFooter{
+    .casaFooter{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+      }
+
+      p{
+        grid-column: 2 / 3;
+      }
+
+
+    }
+  }
+
+  >p{
+    background-color: $oscuro;
+    text-align: center;
+  }
+}
