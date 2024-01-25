@@ -6,8 +6,16 @@
      }
     }
 
-// @mixin screen_desktop{
-//     @media screen and (min-width: $screen_phone){
-//         @content;
-//     }
-// }
+ @mixin screen_desktop{
+     @media screen and (min-width: $screen_tablet){
+         @content;
+     }
+    }
+
+
+@mixin screen_tablet{
+    @media screen and (min-width: $screen_phone){
+        @content;
+    }
+}
+
