@@ -8,20 +8,27 @@
 </head>
 <body>
     <header>
-        <nav class="container">
-            <img id="logo" src="/img/logo.png">
-            <ul>
-                <li><a>Nosotros</a></li>
-                <li><a>Casas</a></li>
-                <li><a>Contacto</a></li>
-            </ul>
-        </nav>
+        <div>
+            <div class="containerLogo">
+                <img src="/img/logo.png" class="logo" alt="logo">
+            </div>
+            <nav>
+                <a href="#"> Nosotros</a>
+                <a href="#"> Casas</a>
+                <a href="#"> Contacto</a>
+            </nav>
+        </div>
     </header>
 
     <section id="hero" class="container">
-        <img src="/img/nosotros.jpg">
-        <h1>Sobre nosotros</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula justo eget nisl laoreet, sed euismod massa rhoncus. Phasellus ornare augue risus, facilisis fermentum lectus blandit ut. Mauris pharetra facilisis elit, commodo varius tortor interdum sed. Sed accumsan ex a fringilla accumsan. Sed suscipit orci eu nibh elementum dictum. Integer venenatis lacus dui, ac tincidunt ex pellentesque in. Integer sollicitudin facilisis dolor, non facilisis justo luctus vitae.</p>
+        <div>
+            <img src="/img/nosotros.jpg">
+        </div>
+        <div class="contenidoHero">
+            <h1>Sobre nosotros</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula justo eget nisl laoreet, sed euismod massa rhoncus. Phasellus ornare augue risus, facilisis fermentum lectus blandit ut. Mauris pharetra facilisis elit, commodo varius tortor interdum sed. Sed accumsan ex a fringilla accumsan. Sed suscipit orci eu nibh elementum dictum. Integer venenatis lacus dui, ac tincidunt ex pellentesque in. Integer sollicitudin facilisis dolor, non facilisis justo luctus vitae.</p>
+        </div>
+      
     </section>
 
     <main class="container">
@@ -37,7 +44,7 @@
             <button href="#">Más información</button>
         </div>
 
-        <div class="casa">
+        <div class="casa casa2">
             <h2>Casa 2</h2>
             <img src="/img/casa2.jpg">
             <p>Etiam nisl dui, rutrum sed porttitor id, interdum at magna. Curabitur ultricies scelerisque auctor. Vestibulum ex augue, sagittis mollis volutpat eu, maximus a turpis. Morbi nec metus aliquet, imperdiet lectus porta, ornare lectus. Praesent non ultricies magna, sit amet blandit risus. Aliquam sit amet lectus varius, finibus orci ultricies, aliquam sapien. Praesent varius ipsum ut viverra placerat. </p>
@@ -73,55 +80,63 @@
 
     <footer>
         <div class="container">
-            <div class="footerNosotros">
+            <div class="footerNosotros"> <!-- widget-->
                 <h2>Nosotros</h2>
                 <p> Aliquam tempor rhoncus suscipit. Nam sed elementum libero. Vivamus sit amet mollis mi. </p>
             </div>
     
-            <div class="navegacionFooter">
+            <div class="navegacionFooter"> <!-- widget-->
                 <h2>Navegación</h2>
-                <ul>
-                    <li>Nosotros</li>
-                    <li>Casas</li>
-                    <li>Contacto</li>
-                </ul>
+                <nav>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Casas</a>
+                    <a href="#">Contacto</a>
+                </nav>
             </div>
     
-            <div class="casasVentaFooter">
+            <div class="casasVentaFooter"> 
                 <h2>Casas a la venta</h2>
-                <div class="casaFooter">
-                    <img src="img/casa2.jpg">
-                    <div class="infoCasaFooter">
+                <div class="casaFooter"> 
+                    <div class="contenedorImagenFooter"> 
+                        <img src="img/casa2.jpg">
+                    </div>
+                    <div class="infoCasaFooter"> 
                         <p>Casa 2</p>
                         <p>$2,000,000</p>
                     </div>
                 </div>
-                <div class="casaFooter">
-                    <img src="img/casa3.jpg">
-                    <div class="infoCasaFooter">
+                <div class="casaFooter"> 
+                    <div class="contenedorImagenFooter"> 
+                        <img src="img/casa3.jpg">
+                    </div>
+                    <div class="infoCasaFooter"> 
                         <p>Casa 3</p>
                         <p>$2,000,000</p>
                     </div>
                 </div>
-                <div class="casaFooter">
-                    <img src="img/casa4.jpg">
-                    <div class="infoCasaFooter">
+                <div class="casaFooter"> 
+                    <div class="contenedorImagenFooter"> 
+                        <img src="img/casa4.jpg">
+                    </div>
+                    <div class="infoCasaFooter"> 
                         <p>Casa 4</p>
                         <p>$2,000,000</p>
                     </div>
                 </div>
                 <div class="casaFooter">
-                    <img src="img/casa5.jpg">
-                    <div class="infoCasaFooter">
+                    <div class="contenedorImagenFooter"> 
+                        <img src="img/casa5.jpg">
+                    </div>
+                    <div class="infoCasaFooter"> 
                         <p>Casa 5</p>
                         <p>$2,000,000</p>
                     </div>
                 </div>
             </div>
     
-            <p>Derechos Reservados Bienes Raices 2018</p>
 
         </div>
+        <p>Derechos Reservados Bienes Raices 2018</p>
 
     </footer>
 
