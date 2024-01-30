@@ -224,16 +224,14 @@ footer > div .navegacionFooter nav a {
 }
 footer > div .casasVentaFooter {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
 }
 footer > div .casasVentaFooter h2 {
   grid-column: 1/4;
 }
 footer > div .casasVentaFooter .casaFooter {
-  grid-column: 1/2;
-  grid-row: span 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 footer > div .casasVentaFooter .casaFooter .contenedorImagenFooter {
   grid-column: 1/2;
