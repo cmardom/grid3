@@ -164,18 +164,6 @@ footer {
   color: var(--claro);
   padding: var(--padding);
 }
-footer div {
-  background-color: var(--primario);
-}
-footer div h2 {
-  background-color: var(--primario);
-}
-footer div p {
-  background-color: var(--primario);
-}
-footer .containerFooter {
-  background-color: var(--primario);
-}
 @media screen and (min-width: 700px) {
   footer .containerFooter {
     display: grid;
@@ -183,31 +171,21 @@ footer .containerFooter {
     grid-column-gap: var(--paddingt);
   }
 }
-footer .containerFooter .navegacionFooter {
-  background-color: var(--primario);
-}
 footer .containerFooter .navegacionFooter nav {
-  background-color: var(--primario);
   display: grid;
   grid-row-gap: 1rem;
 }
 footer .containerFooter .navegacionFooter nav a {
-  background-color: var(--primario);
   text-decoration: none;
   color: var(--claro);
 }
-footer .containerFooter .casasVentaFooter {
-  background-color: var(--primario);
-}
 footer .containerFooter .casasVentaFooter .containerCasas {
-  background-color: var(--primario);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: repeat(2, auto);
   grid-row-gap: 1rem;
 }
 footer .containerFooter .casasVentaFooter .containerCasas .casaFooter {
-  background-color: var(--primario);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;

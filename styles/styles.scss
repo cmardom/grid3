@@ -181,18 +181,8 @@ footer{
   background-color: var(--primario);
   color: var(--claro);
   padding: var(--padding);
-  div{
-    background-color: var(--primario);
-    h2{
-      background-color: var(--primario);
-    }
-    p{
-      background-color: var(--primario);
-    }
-  }
 
   .containerFooter {
-    background-color: var(--primario);
 
     @include screen_desktop{
       display: grid;
@@ -201,13 +191,10 @@ footer{
     }
 
     .navegacionFooter{
-      background-color: var(--primario);
       nav{
-        background-color: var(--primario);
         display: grid;
         grid-row-gap: 1rem;
         a{
-          background-color: var(--primario);
           text-decoration: none;
           color: var(--claro);
         }
@@ -215,17 +202,13 @@ footer{
     }
   
     .casasVentaFooter{
-      background-color: var(--primario);
 
       .containerCasas{
-       background-color: var(--primario);
        display: grid;
        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
        grid-template-rows: repeat(2, auto);
        grid-row-gap: 1rem;
         .casaFooter{
-          background-color: var(--primario);
-
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 1rem;
