@@ -131,10 +131,13 @@ main .destacado .info-casa {
 }
 main .casa {
   border: 1px solid black;
+  display: grid;
+  justify-items: start;
 }
 main .casa .info-casa {
   background-color: var(--claro);
   padding: var(--padding);
+  display: grid;
 }
 main .casa .info-casa h2 + p {
   padding: var(--padding) 0px;

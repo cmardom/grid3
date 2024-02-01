@@ -140,11 +140,14 @@ main{
 
   .casa{
     border: 1px solid black;
+    display: grid;
+    justify-items: start;
+  
     .info-casa{
       background-color: var(--claro);
       padding: var(--padding);
-      //display: grid;
-  
+      display: grid;
+      
       h2+ p {
         padding: var(--padding) 0px;
       }
@@ -200,7 +203,6 @@ footer{
     }
   
     .casasVentaFooter{
-
       .containerCasas{
        display: grid;
        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
