@@ -14,17 +14,18 @@
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "Helvetica", sans-serif;
   font-weight: lighter;
-  background-color: var(--gris);
 }
 
 .container {
   margin: 0 auto;
   max-width: 1100px;
+}
+
+body {
   background-color: var(--gris);
 }
 
@@ -33,48 +34,39 @@ img {
 }
 
 p {
-  background-color: var(--claro);
   font-size: 11pt;
-}
-
-h2 {
-  background-color: var(--claro);
 }
 
 header {
   background-color: var(--oscuro);
   padding: var(--padding);
 }
-header > div {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  background-color: var(--oscuro);
-}
 @media screen and (min-width: 700px) {
-  header > div {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-header > div .containerLogo {
-  grid-column: 1/2;
-  background-color: var(--oscuro);
-}
-header > div .containerLogo img {
-  background-color: var(--oscuro);
-}
-header > div nav {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  background-color: var(--oscuro);
-}
-@media screen and (min-width: 700px) {
-  header > div nav {
-    grid-column: 2/3;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  header .contenidoHeader {
+    display: grid;
+    grid-template-columns: 30% 1fr 30%;
     align-items: center;
   }
 }
-header > div nav a {
+header .contenidoHeader img {
+  grid-column: 1/3;
+}
+header .contenidoHeader nav {
+  align-items: center;
+}
+@media screen and (min-width: 700px) {
+  header .contenidoHeader nav {
+    grid-column: 3/3;
+  }
+}
+header .contenidoHeader nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+header .contenidoHeader nav ul li {
+  display: grid;
+}
+header .contenidoHeader nav ul li a {
   color: var(--claro);
   background-color: var(--oscuro);
   text-decoration: none;
@@ -82,14 +74,13 @@ header > div nav a {
 
 #hero {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   margin-top: var(--padding);
   grid-gap: var(--padding);
   justify-items: center;
 }
 @media screen and (min-width: 700px) {
   #hero {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
@@ -103,198 +94,69 @@ header > div nav a {
 
 main {
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, max-content));
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   grid-gap: var(--padding);
-  padding-bottom: var(--padding);
-  justify-items: center;
+  padding: var(--padding);
 }
 @media screen and (min-width: 700px) {
   main {
-    grid-template-columns: repeat(3, minmax(100px, max-content));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-main h2 {
+main .destacado {
   grid-column: 1/3;
-  grid-row: 1/2;
-  padding: var(--padding) 0 var(--padding) 0;
-  justify-self: start;
-  background-color: var(--gris);
 }
-@media screen and (min-width: 700px) {
-  main h2 {
-    grid-column: 1/4;
-    grid-row: 1/2;
+@media screen and (min-width: 480px) {
+  main .destacado {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-main > div {
-  background-color: var(--claro);
-  border: 1px solid var(--negro);
-  gap: var(--padding);
+main .destacado img {
+  width: 100%;
 }
-main > div button {
+@media screen and (min-width: 480px) {
+  main .destacado img {
+    grid-column: 1/2;
+  }
+}
+main .destacado .info-casa {
+  grid-column: 1/3;
+}
+@media screen and (min-width: 480px) {
+  main .destacado .info-casa {
+    grid-column: 2/3;
+  }
+}
+main .casa {
+  border: 1px solid black;
+}
+main .casa .info-casa {
+  background-color: var(--claro);
+  padding: var(--padding);
+}
+main .casa .info-casa h2 + p {
+  padding: var(--padding) 0px;
+}
+main .casa .info-casa .precio {
+  align-items: center;
+  font-weight: bold;
+}
+main .casa .info-casa .precio .dinero {
+  color: var(--primario);
+  grid-column: 2/3;
+}
+main .casa .info-casa button {
   background-color: var(--primario);
   color: var(--claro);
   padding: var(--padding);
   border: none;
 }
-main > div button:hover {
+main .casa .info-casa button:hover {
   background-color: var(--claro);
   color: var(--primario);
   transition: 1s;
-}
-main .casa {
-  display: grid;
-  background-color: var(--claro);
-}
-main .casa img {
-  grid-column: 1/3;
-  grid-row: 1/3;
-}
-main .casa h2 {
-  grid-column: 1/3;
-  grid-row: 4/5;
-  background-color: var(--claro);
-  padding: var(--padding);
-}
-main .casa p {
-  grid-column: 1/3;
-  grid-row: span 2;
-  padding: 0 var(--padding) 0 var(--padding);
-}
-main .casa .precio {
-  grid-column: 1/3;
-  grid-row: 7/7;
-  font-weight: bold;
-}
-main .casa .precio .dinero {
-  color: var(--primario);
-  background-color: var(--claro);
-}
-main .casa button {
-  grid-column: span 2;
-  grid-row: 8/9;
-  margin: var(--padding);
-  justify-self: stretch;
-}
-main .casa1 {
-  grid-column: 1/3;
-  grid-row: 2/4;
-  display: grid;
-}
-@media screen and (min-width: 700px) {
-  main .casa1 {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 480px) {
-  main .casa1 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-main .casa1 .containerImgCasa1 {
-  background-image: url(/img/casa1.jpg);
-  background-size: cover;
-}
-@media screen and (min-width: 480px) {
-  main .casa1 .containerImgCasa1 {
-    grid-column: 1/2;
-    grid-row: span 6;
-  }
-}
-main .casa1 .containerImgCasa1 img {
-  grid-column: 1/2;
-  grid-row: 2/4;
-}
-main .casa1 .infoCasa1 {
-  display: grid;
-  background-color: var(--claro);
-  padding: var(--padding) 0 var(--padding) 0;
-}
-@media screen and (min-width: 480px) {
-  main .casa1 .infoCasa1 {
-    grid-column: 2/3;
-    grid-row: span 1;
-  }
-}
-main .casa1 .infoCasa1 h2 {
-  background-color: var(--claro);
-}
-@media screen and (min-width: 480px) {
-  main .casa1 .infoCasa1 h2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-}
-main .casa1 .infoCasa1 p {
-  grid-column: 1/2;
-  grid-row: span 1;
-  padding: var(--padding) 0 var(--padding) 0;
-}
-@media screen and (min-width: 480px) {
-  main .casa1 .infoCasa1 p {
-    grid-column: 2/3;
-    grid-row: span 1;
-  }
-}
-main .casa1 .infoCasa1 .precio {
-  font-weight: bold;
-  background-color: var(--claro);
-}
-main .casa1 .infoCasa1 .precio .dinero {
-  color: var(--primario);
-  background-color: var(--claro);
-}
-main .casa1 h2 {
-  background-color: var(--claro);
-}
-@media screen and (min-width: 480px) {
-  main .casa1 h2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-}
-main .casa1 p {
-  grid-column: 1/2;
-  grid-row: span 1;
-  margin-right: var(--padding);
-}
-@media screen and (min-width: 480px) {
-  main .casa1 p {
-    grid-column: 2/3;
-    grid-row: span 1;
-  }
-}
-main .casa1 button {
-  grid-column: 1/2;
-  grid-row: span 1;
-  margin: var(--padding);
-}
-@media screen and (min-width: 480px) {
-  main .casa1 button {
-    grid-column: 1/3;
-    grid-row: span 1;
-  }
-}
-@media screen and (min-width: 480px) {
-  main .casa2 h2 {
-    grid-column: 1/3;
-    grid-row: 3/4;
-  }
-}
-@media screen and (min-width: 480px) {
-  main .casa2 button {
-    grid-column: 1/3;
-    grid-row: 8/9;
-  }
-}
-@media screen and (min-width: 700px) {
-  main .casa2 {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    align-items: start;
-  }
 }
 
 footer {
